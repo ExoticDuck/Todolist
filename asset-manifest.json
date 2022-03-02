@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ExoticDuck/Todolist/static/css/main.6f30ddfc.chunk.css",
+    "main.js": "/ExoticDuck/Todolist/static/js/main.223db70a.chunk.js",
+    "main.js.map": "/ExoticDuck/Todolist/static/js/main.223db70a.chunk.js.map",
+    "runtime-main.js": "/ExoticDuck/Todolist/static/js/runtime-main.75947d0d.js",
+    "runtime-main.js.map": "/ExoticDuck/Todolist/static/js/runtime-main.75947d0d.js.map",
+    "static/js/2.07250795.chunk.js": "/ExoticDuck/Todolist/static/js/2.07250795.chunk.js",
+    "static/js/2.07250795.chunk.js.map": "/ExoticDuck/Todolist/static/js/2.07250795.chunk.js.map",
+    "index.html": "/ExoticDuck/Todolist/index.html",
+    "precache-manifest.4887d7234359d8f0a00dba227287dc42.js": "/ExoticDuck/Todolist/precache-manifest.4887d7234359d8f0a00dba227287dc42.js",
+    "service-worker.js": "/ExoticDuck/Todolist/service-worker.js",
+    "static/css/main.6f30ddfc.chunk.css.map": "/ExoticDuck/Todolist/static/css/main.6f30ddfc.chunk.css.map",
+    "static/js/2.07250795.chunk.js.LICENSE.txt": "/ExoticDuck/Todolist/static/js/2.07250795.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75947d0d.js",
+    "static/js/2.07250795.chunk.js",
+    "static/css/main.6f30ddfc.chunk.css",
+    "static/js/main.223db70a.chunk.js"
+  ]
+}
