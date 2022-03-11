@@ -23,3 +23,10 @@
   opacity: 0.5;
 } */
 
+.App {
+  background-image: url(./Без\ имени.jpg);
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
