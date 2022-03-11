@@ -1,3 +1,5 @@
+import { Button, Checkbox, IconButton } from "@material-ui/core";
+import { Delete } from "@material-ui/icons";
 import React, { ChangeEvent, KeyboardEvent, useState } from "react";
 import { FilterValuesType, TaskType } from "./App";
 import AddItemForm from "./components/AddItemForm";
@@ -34,10 +36,17 @@ export const Todolist = (props: PropsType) => {
         } 
 
      return <li key={t.id} className={t.isDone ? "is-done" : ""}>
-        <input type="checkbox" checked={t.isDone} onChange={onChangeHandler}/>
+        {/* <input type="checkbox" checked={t.isDone} onChange={onChangeHandler}/> */}
+        <Checkbox
+        checked={t.isDone}
+        color="primary"
+        onChange={onChangeHandler}/>
         <EditableSpan value={t.title} onChange={onChangeForSpan}/>
         {/* <span>{t.title}</span> */}
-        <button onClick={onClickHandler}>x</button>
+        {/* <button onClick={onClickHandler}>x</button> */}
+        <IconButton onClick={onClickHandler}>
+            <Delete/>
+        </IconButton>
     </li>
     })
 
@@ -49,21 +58,30 @@ export const Todolist = (props: PropsType) => {
         props.changeTodolistTitle(title, props.id);
     }
 
+    const removeTodolist = () => {
+        props.deleteTodolist(props.id);
+    }
+
     const onAllClickHandler = () => {props.changeFilter("all", props.id)}
     const onCompletedClickHandler = () => {props.changeFilter("completed", props.id)}
     const onActiveClickHandler = () => {props.changeFilter("active", props.id)}
 
     return (
         <div>
-            <h3><EditableSpan value={props.title} onChange={onChangeHandlerTodolist}/><button onClick={() => props.deleteTodolist(props.id)}>x</button></h3>
+            <h3><EditableSpan value={props.title} onChange={onChangeHandlerTodolist}/>
+            {/* <button onClick={() => props.deleteTodolist(props.id)}>x</button> */}
+            <IconButton onClick={removeTodolist}>
+                <Delete/>
+            </IconButton>
+            </h3>
             <div>
                 <AddItemForm addItem={addTask} />
             </div>
             {mappedTasks}
             <div>
-                <button onClick={onAllClickHandler} className={props.filter === "all" ? "active-filter" : ""}>All</button>
-                <button onClick={onActiveClickHandler} className={props.filter === "active" ? "active-filter" : ""}>Active</button>
-                <button onClick={onCompletedClickHandler} className={props.filter === "completed" ? "active-filter" : ""}>Completed</button>
+                <Button onClick={onAllClickHandler} className={props.filter === "all" ? "active-filter" : ""} color="primary" variant={props.filter === "all" ? "contained" : "outlined"}>All</Button>
+                <Button onClick={onActiveClickHandler} className={props.filter === "active" ? "active-filter" : ""} color="primary" variant={props.filter === "active" ? "contained" : "outlined"}>Active</Button>
+                <Button onClick={onCompletedClickHandler} className={props.filter === "completed" ? "active-filter" : ""} color="primary" variant={props.filter === "completed" ? "contained" : "outlined"}>Completed</Button>
             </div>
         </div>
     );
