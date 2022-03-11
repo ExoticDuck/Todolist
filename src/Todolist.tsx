@@ -79,9 +79,9 @@ export const Todolist = (props: PropsType) => {
             </div>
             {mappedTasks}
             <div>
-                <Button onClick={onAllClickHandler} className={props.filter === "all" ? "active-filter" : ""} color="primary" variant={props.filter === "all" ? "contained" : "outlined"}>All</Button>
-                <Button onClick={onActiveClickHandler} className={props.filter === "active" ? "active-filter" : ""} color="primary" variant={props.filter === "active" ? "contained" : "outlined"}>Active</Button>
-                <Button onClick={onCompletedClickHandler} className={props.filter === "completed" ? "active-filter" : ""} color="primary" variant={props.filter === "completed" ? "contained" : "outlined"}>Completed</Button>
+                <Button onClick={onAllClickHandler} className={props.filter === "all" ? "active-filter" : ""} color="primary" variant={props.filter === "all" ? "contained" : "outlined"} style={{margin: "10px 5px 10px 0"}}>All</Button>
+                <Button onClick={onActiveClickHandler} className={props.filter === "active" ? "active-filter" : ""} color="primary" variant={props.filter === "active" ? "contained" : "outlined"} style={{margin: "10px 5px 10px 0"}}>Active</Button>
+                <Button onClick={onCompletedClickHandler} className={props.filter === "completed" ? "active-filter" : ""} color="primary" variant={props.filter === "completed" ? "contained" : "outlined"} style={{margin: "10px 0px 10px 0"}}>Completed</Button>
             </div>
         </div>
     );
