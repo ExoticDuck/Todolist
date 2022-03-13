@@ -12,7 +12,7 @@ export const tasksReducer = (state: TasksStateType = initialState, action: Actio
             return {...newState, [action.todolistID]: tasks};
         case "ADD-TASK" : {
             let newState = {...state};
-            let task = {id: '4', title: action.title, isDone: false};
+            let task = {id: v1(), title: action.title, isDone: false};
             newState[action.todolistID].unshift(task);
             return newState;
         }

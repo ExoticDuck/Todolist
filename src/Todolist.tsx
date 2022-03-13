@@ -36,14 +36,11 @@ export const Todolist = (props: PropsType) => {
         } 
 
      return <li key={t.id} className={t.isDone ? "is-done" : ""}>
-        {/* <input type="checkbox" checked={t.isDone} onChange={onChangeHandler}/> */}
         <Checkbox
         checked={t.isDone}
         color="primary"
         onChange={onChangeHandler}/>
         <EditableSpan value={t.title} onChange={onChangeForSpan}/>
-        {/* <span>{t.title}</span> */}
-        {/* <button onClick={onClickHandler}>x</button> */}
         <IconButton onClick={onClickHandler}>
             <Delete/>
         </IconButton>
@@ -69,7 +66,6 @@ export const Todolist = (props: PropsType) => {
     return (
         <div>
             <h3><EditableSpan value={props.title} onChange={onChangeHandlerTodolist}/>
-            {/* <button onClick={() => props.deleteTodolist(props.id)}>x</button> */}
             <IconButton onClick={removeTodolist}>
                 <Delete/>
             </IconButton>
