@@ -1,7 +1,7 @@
 {
   "name": "todo15v2",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/todolist",
+  "homepage": "https://exoticduck.github.io/Todolist",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.4.1",
