@@ -77,7 +77,7 @@ export const TodolistsList: React.FC = () => {
 
     if(!isLoggedIn) {
         debugger
-        return <Navigate to={"/Todolist/login"}/>
+        return <Navigate to={"/login"}/>
     }
 
     return <>
