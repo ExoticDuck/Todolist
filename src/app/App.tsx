@@ -37,21 +37,21 @@ function App() {
     let logoutClickHandler = () => {
         dispatch(logOutTC());
     }
-    
+
     if (!isInitialized) {
         return <div
-            style={{position: 'fixed', top: '30%', textAlign: 'center', width: '100%'}}>
-            <CircularProgress/>
+            style={{ position: 'fixed', top: '30%', textAlign: 'center', width: '100%' }}>
+            <CircularProgress />
         </div>
-     }
-     
+    }
+
     return (
         <div className="App">
-            <ErrorSnackbar/>
+            <ErrorSnackbar />
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" color="inherit" aria-label="menu">
-                        <Menu/>
+                        <Menu />
                     </IconButton>
                     <Typography variant="h6">
                         News
@@ -59,14 +59,16 @@ function App() {
                     <Button color="inherit">Login</Button>
                     {isLoggedIn && <Button color='inherit' onClick={logoutClickHandler}>Log out</Button>}
                 </Toolbar>
-                {status === "loading" && <LinearProgress/>}
+                {status === "loading" && <LinearProgress />}
             </AppBar>
             <Container fixed>
                 <Routes>
-                    <Route path="/" element={<TodolistsList/>}/>
-                    <Route path="/login" element={<Login/>}/>
-                    <Route path="/*" element={<Navigate to={"/404"}/>}/>
-                    <Route path="/404" element={<h1>Page not found</h1>}/>
+                    <Route path='/Todolist'>
+                        <Route path="/" element={<TodolistsList />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/*" element={<Navigate to={"/404"} />} />
+                        <Route path="/404" element={<h1>Page not found</h1>} />
+                    </Route>
                 </Routes>
             </Container>
         </div>
