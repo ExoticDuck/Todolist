@@ -66,7 +66,7 @@ function App() {
                     <Route path='/Todolist'>
                         <Route path="/" element={<TodolistsList />} />
                         <Route path="/login" element={<Login />} />
-                        <Route path="/*" element={<Navigate to={"/404"} />} />
+                        <Route path="/*" element={<Navigate to={"/Todolist/404"} />} />
                         <Route path="/404" element={<h1>Page not found</h1>} />
                     </Route>
                 </Routes>
